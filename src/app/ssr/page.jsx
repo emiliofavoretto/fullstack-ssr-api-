@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default async function GetPage() {
 
-    let series;
+    let series = []
     try {
         const resp = await axios.get(
           `${process.env.API_URL_SERIES}?limit=50`,
@@ -23,7 +23,13 @@ export default async function GetPage() {
             <h2>Busca feita pelo servidor com api-key privado</h2>
             <p>DevTools - network : essa chamada nem aparec lá, pois ela acontece no servidor.</p>
             <p>Axios.get deireto na API e salva SessionStorage, mas rodando no servidor, a api-key nunca chega no navegador</p>
-            <ul></ul>
+            <ul>
+                {series.map((item, index) => (
+                    <li key={item.id || index}>
+                        {item.title || item.name || JSON.stringify(item)}
+                    </li>
+                ))}
+            </ul>
         </main>
     )
 }
