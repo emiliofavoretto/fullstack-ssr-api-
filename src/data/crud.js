@@ -1,11 +1,20 @@
-import { KeyRound, Server, HardDrive, List } from "lucide-react";
+import {
+    HardDrive,
+    KeyRound,
+    Layers3,
+    List,
+    PlusCircle,
+    Server,
+    SquarePen,
+    Trash2,
+} from 'lucide-react';
 
 export const examples = [
     {
         id: 1,
         method: 'ApiKey',
         verb: 'Get',
-        description: 'Lista series com api-key exposta',
+        description: 'Lista séries com api-key exposta.',
         color: 'purple',
         Icon: KeyRound,
     },
@@ -13,7 +22,7 @@ export const examples = [
         id: 2,
         method: 'SSR',
         verb: 'Get',
-        description: 'Lista series resnderizadas direto no SSR(servidor) com api-key exposta',
+        description: 'Lista séries renderizadas no SSR.',
         color: 'purple',
         Icon: Server,
     },
@@ -21,19 +30,27 @@ export const examples = [
         id: 3,
         method: 'Offline',
         verb: 'Get',
-        description: 'Lista series comnsumida no sessionStorage',
+        description: 'Lista séries salvas no sessionStorage.',
         color: 'purple',
         Icon: HardDrive,
-    }
-] 
+    },
+    {
+        id: 4,
+        method: 'FullStack',
+        verb: 'Get',
+        description: 'Lista séries via API Route - BackEnd Intermediário.',
+        color: 'purple',
+        Icon: Layers3,
+    },
+]; 
 
 export const crud = [
     {
-        id: 2,
-        method: 'Read',
-        verb: 'Get',
-        description: 'Lista todas as series ',
-        color: 'green',
-        Icon: List,
+        id: 1,
+        method: 'Create',
+        verb: ' post',
+        description: 'Cria uma nova série via modal e API Route - BackEnd Intermediário.',
+        color: 'orange',
+        Icon: PlusCircle,
     },
 ];
