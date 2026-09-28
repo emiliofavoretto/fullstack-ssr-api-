@@ -10,7 +10,7 @@ export default function FormModal({ openModal, serie, confirmLoading, onSubmit, 
         open={openModal}
         title={serie ? 'Editar Série' : 'Criar nova Série'}
         centered
-        onOk={() => form.onSubmit()}
+        onOk={() => form.submit()}
         onCancel={onCancel}
         confirmLoading={confirmLoading}
         destroyOnHide>
@@ -42,7 +42,7 @@ export default function FormModal({ openModal, serie, confirmLoading, onSubmit, 
                     label="temporadas"
                     rules={[{
                         required: true, 
-                        type: 'number',
+    
                         message: 'O número de temporadas é obrigatório .'
                         }]}>
                             <Input placeholder='ex: 5' min={1} style={{ width: '100%' }} />
@@ -53,14 +53,13 @@ export default function FormModal({ openModal, serie, confirmLoading, onSubmit, 
                     label="ano de lançamento"
                     rules={[{
                         required: true, 
-                        type: 'number',
                         message: 'Ano de lançamento é obrigatório .'
                         }]}>
                             <Input placeholder='ex: 2008' min={1900} style={{ width: '100%' }} />
                     </Form.Item>
 
                     <Form.Item 
-                    name="imagemUrl"
+                    name="imageUrl"
                     label="URL da Imagem"
                     rules={[{ 
                         type: 'url',

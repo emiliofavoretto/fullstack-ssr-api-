@@ -15,17 +15,17 @@ export default function CreatePage() {
 
     try {
       await axios.post("/api/series", values);
-      setOpenModal(false); // Fecha o modal após o sucesso
+      setOpenModal(false); 
       toast.success("Série criada", { id: "create" });
     } catch (error) {
       toast.error("Erro ao criar série", { id: "create" });
-      console.error(error);
+      console.error("Detalhes do erro na API:", error.response?.data);
     } finally {
       setLoading(false);
     }
   };
 
-  // O return do JSX fica fora de handleSubmit
+  
   return (
     <main>
       <p>
