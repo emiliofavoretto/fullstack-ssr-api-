@@ -53,4 +53,12 @@ export const crud = [
         color: 'orange',
         Icon: PlusCircle,
     },
+    {
+        id: 2,
+        method: 'Read',
+        verb: 'Get',
+        description: 'Listar series no SSR e busca pelo id em rota dianmica. ',
+        color: 'green',
+        Icon: List,
+    },
 ];
