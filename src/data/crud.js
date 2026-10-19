@@ -61,4 +61,20 @@ export const crud = [
         color: 'green',
         Icon: List,
     },
+    {
+        id: 3,
+        method: 'Update',
+        verb: 'Put',
+        description: 'Atualizar series existente pelo id',
+        color: 'Blue',
+        Icon: SquarePen,
+    },
+    {
+        id: 4,
+        method: 'Delete',
+        verb: 'Delete',
+        description: 'Remover séries existente pelo id',
+        color: 'red',
+        Icon: Trash2,
+    },
 ];

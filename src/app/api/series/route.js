@@ -28,7 +28,6 @@ export async function POST(req) {
 
     return NextResponse.json(response.data, { status: 201 });
   } catch (error) {
-    // Imprime no terminal do VS Code a resposta detalhada do erro
     console.error('Erro na API externa (POST):', error.response?.data || error.message);
 
     const status = error.response?.status || 500;
