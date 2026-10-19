@@ -2,15 +2,15 @@
 
 import { Button, Modal} from 'antd'
 
-export default function ConfimDelete({ openModal, serie, confirmLoading, onConfirm, onCancel}) {
+export default function ConfirmDelete({ openModal, serie, confirmLoading, onConfirm, onCancel}) {
     return (
-        <Modal>
+        <Modal
             open={openModal}
             title="Comfirmar Exclusão"
             centered
             onCancel={onCancel}
             footer={null}
-            detroyOnHidden
+            destroyOnHidden>           
             <p>Tem certeza que quer deletar a série "{serie?.title}"</p>
             <Button danger type="primary" loading={confirmLoading} onClick={onConfirm}>
                 Excluir
